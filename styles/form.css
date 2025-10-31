@@ -1,0 +1,103 @@
+body {
+  background: url(../images/hero-section-background-image.webp);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.form-section {
+  height: 100vh;
+  padding-top: 60px;
+  margin-bottom: 2rem;
+}
+p {
+  font-family: var(--primary-text);
+  color: var(--accent-color);
+}
+.join-us-section-form form .form-header {
+  font-family: var(--primary-text);
+  font-size: 30px;
+  font-weight: 700;
+}
+.spacing {
+  gap: 10px;
+}
+
+.join-us-section-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.627);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 20px;
+}
+.join-us-section-form form input {
+  padding: 20px 15px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.305);
+  background: none;
+  color: rgb(255, 255, 255);
+}
+.form-content {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.main-user-registration {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.join-us-section-form form input:focus {
+  outline: 1px solid var(--accent-color);
+}
+.join-us-section-form form input::placeholder {
+  color: rgb(255, 255, 255);
+}
+.join-us-section-form form .submit-button {
+  display: flex;
+  justify-content: center;
+}
+.join-us-section-form form .submit-button button {
+  padding: 15px 70px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: var(--primary-color);
+  transition: all 0.2s ease-in;
+}
+.join-us-section-form form .sign-up-button button:hover {
+  background-color: rgb(136, 136, 255);
+}
+.underline {
+  position: relative;
+}
+.underline::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: var(--accent-color);
+  bottom: 7px;
+}
+@media (max-width: 900px) {
+  .form-section {
+    padding-top: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    margin-bottom: 0;
+  }
+  .form-section form {
+    border-radius: 0;
+  }
+  .form-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
