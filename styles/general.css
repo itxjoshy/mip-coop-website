@@ -408,7 +408,7 @@ main,
   }
   section,
   main {
-    width: 96%;
+    max-width: 96%;
     padding: 0 10px;
   }
   .footer-main {
@@ -433,10 +433,13 @@ main,
 @media screen and (min-width: 901px) and (max-width: 1400px) {
   section,
   main {
-    max-width: 92%;
-    aspect-ratio: 16/9;
+    max-width: 96%;
   }
   main {
-    aspect-ratio: 16/7;
+    height: max-content;
+    aspect-ratio: 16/6.7;
+  }
+  .sub-page-header {
+    max-width: 96%;
   }
 }
