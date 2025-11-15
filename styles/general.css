@@ -433,7 +433,7 @@ main,
 @media screen and (min-width: 901px) and (max-width: 1400px) {
   section,
   main {
-    max-width: 95%;
+    max-width: 94%;
     aspect-ratio: 16/8;
   }
 }
