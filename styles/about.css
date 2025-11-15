@@ -1,6 +1,9 @@
 h1 {
   font-size: 1em;
 }
+body {
+  overflow-x: hidden;
+}
 .about-section-header {
   background: linear-gradient(
       rgba(0, 0, 0, 0.4),
