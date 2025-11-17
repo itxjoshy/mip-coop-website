@@ -381,6 +381,10 @@ main,
   margin: 0 auto;
 }
 @media (max-width: 900px) {
+  section,
+  main {
+    max-width: 100%;
+  }
   .sub-page-header {
     margin-top: 10px;
     padding: 5rem;
