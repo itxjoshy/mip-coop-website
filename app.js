@@ -2,7 +2,7 @@ const hambugerMenu = document.querySelector(".hamburger-menu");
 const mobileMenu = document.querySelector(".mobile-menu");
 const pathName = window.location.pathname;
 const pageName = pathName.split("/").pop();
-const body = document.body;
+const body = document.querySelector("body");
 
 hambugerMenu.addEventListener("click", () => {
   hambugerMenu.classList.toggle("active");
