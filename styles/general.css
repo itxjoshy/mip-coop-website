@@ -22,7 +22,9 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+body.no-scroll {
+  overflow: hidden;
+}
 html {
   scroll-behavior: smooth;
   height: 100%;
