@@ -386,7 +386,8 @@ main,
 }
 @media screen and (max-width: 1920px) {
   section,
-  main {
+  main,
+  .sub-page-header {
     max-width: 96%;
   }
 }
