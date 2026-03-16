@@ -1,28 +1,18 @@
-window.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  params.forEach((value, key) => {
-    const input = document.querySelector(`[name="${key}"]`);
-    if (input) input.value = value;
-  });
-});
-
 async function sendForm(event) {
   event.preventDefault();
-
-  const form = document.getElementById("main-form");
+  const form = document.getElementById("contact-form");
   const formData = {};
 
-  // Collect all input values
   new FormData(form).forEach((value, key) => {
-    formData[key] = value.trim();
+    formData[key] = value;
   });
 
-  // Honeypot check
   if (formData["bot_field"]) {
+    // If the bot field is filled, it's a bot submission
     return;
   }
 
-  // Validate all required fields
+  //form validation
   let valid = true;
   let firstInvalid = null;
   form.querySelectorAll("[required]").forEach((field) => {
@@ -42,12 +32,10 @@ async function sendForm(event) {
   }
 
   try {
-    // Submit to Web3Forms
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
       },
       body: JSON.stringify(formData),
     });
@@ -61,7 +49,7 @@ async function sendForm(event) {
       alert("❌ Submission failed: " + (result.message || ""));
     }
   } catch (error) {
-    console.error(error);
+    console.error("Error:", error);
     alert("⚠️ An error occurred while submitting the form.");
   }
 }

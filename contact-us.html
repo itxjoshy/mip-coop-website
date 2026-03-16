@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -319,11 +319,17 @@
         </div>
         <div class="contact-section-form">
           <h3>Get in Touch</h3>
-          <form>
-            <input type="text" placeholder="Full name" />
-            <input type="email" placeholder="Email" />
-            <input type="text" placeholder="Subject" />
-            <textarea placeholder="Message"></textarea>
+          <form id="contact-form" onsubmit="sendForm(event)">
+            <input
+              type="hidden"
+              name="access_key"
+              value="8ba5ef0e-bcaf-4671-b375-8377bbea4d9c"
+            />
+            <input type="text" name="bot_field" style="display: none" />
+            <input type="text" name="full_name" placeholder="Full name" />
+            <input type="email" name="email" placeholder="Email" />
+            <input type="text" name="subject" placeholder="Subject" />
+            <textarea name="message" placeholder="Message"></textarea>
             <button type="submit">Send a message</button>
           </form>
         </div>
@@ -362,10 +368,10 @@
         <div class="footer-address">
           <h4>Address</h4>
           <p>
-            123 Cooperative Street,<br />
-            City, Country<br />
-            Phone: +123 456 7890<br />
-            Email: info@mipcoop.com
+            26, Okanga Plaza, <br />
+            Olusegun Obasanjo way, <br />
+            Wuye, Abuja, Nigeria <br />Phone:
+            <span> +234-913-335-3899 ,+234-806-617-7481 </span>
           </p>
         </div>
         <div class="footer-social">
@@ -465,9 +471,9 @@
             </div>
             instagram
           </a>
-          <div class="contact-link-icon social-link">
+          <!-- <div class="contact-link-icon social-link">
             <?xml version="1.0" encoding="iso-8859-1"?>
-            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
             <svg
               fill="#000000"
               height="800px"
@@ -517,13 +523,14 @@
                 />
               </g>
             </svg>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="footer-bottom">
-        <p><span>&copy;</span> 2025 <span>MIP</span> Cooperative</p>
+        <p><span>&copy;</span> 2026 <span>MIP</span> Cooperative</p>
       </div>
     </footer>
     <script defer src="app.js"></script>
+    <script defer src="scripts/contact-form.js"></script>
   </body>
 </html>
