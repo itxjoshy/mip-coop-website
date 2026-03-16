@@ -337,7 +337,9 @@ footer {
   padding: 8px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: background 0.2s, border 0.2s;
+  transition:
+    background 0.2s,
+    border 0.2s;
 }
 .footer-social .social-link:hover {
   background-color: var(--accent-color);
@@ -381,6 +383,12 @@ main,
 .sub-page-header {
   max-width: 86rem;
   margin: 0 auto;
+}
+@media screen and (max-width: 1920px) {
+  section,
+  main {
+    max-width: 96%;
+  }
 }
 @media (max-width: 900px) {
   .sub-page-header {
