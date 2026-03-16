@@ -390,6 +390,10 @@ main,
   .sub-page-header {
     max-width: 96%;
   }
+  main {
+    height: max-content;
+    aspect-ratio: 16/8;
+  }
 }
 @media (max-width: 900px) {
   .sub-page-header {
