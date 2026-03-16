@@ -392,7 +392,7 @@ main,
   }
   main {
     height: max-content;
-    aspect-ratio: 16/6.7;
+    aspect-ratio: 16/7;
   }
 }
 @media (max-width: 900px) {
