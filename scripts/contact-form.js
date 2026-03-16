@@ -44,7 +44,7 @@ async function sendForm(event) {
     if (result.success) {
       alert("✅ Form submitted successfully!");
       form.reset();
-      window.location.href = "home.html";
+      window.location.href = "/";
     } else {
       alert("❌ Submission failed: " + (result.message || ""));
     }
